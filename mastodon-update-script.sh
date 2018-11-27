@@ -23,10 +23,7 @@ gem install bundler
 bundle install 
 yarn install 
 
-# (?) only need to v2.5.0 (c.f. https://github.com/tootsuite/mastodon/releases/tag/v2.5.0)
-#SKIP_POST_DEPLOYMENT_MIGRATIONS=true RAILS_ENV=production bundle exec rails db:migrate
-
-# Migrate  
+### Migrate  
 RAILS_ENV=production bundle exec rails assets:clobber 
 toot ":neso: < migration starting at $(date)"
 RAILS_ENV=production bundle exec rails db:migrate 
@@ -41,11 +38,6 @@ toot ":neso: < precompiling finished at $(date)"
 ### Restart mastodon-*.service ###
 sudo systemctl restart mastodon-*.service nginx
 sleep 5 && toot ":neso: < services restarting..." 
-
-#v2.5.0に伴い追加 20180903
-#toot ":neso: < migration starting at $(date)"
-#RAILS_ENV=production bundle exec rails db:migrate
-#toot ":neso: < migration finished at $(date)"
 
 ### Toot the end of script ###
 toot ":neso: < The update script is ending at $(date)"
