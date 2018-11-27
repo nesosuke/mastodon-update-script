@@ -7,8 +7,8 @@
 ###
 
 ### Conf values 
-DOMAIN = don.neso.tech
-ACCESS_TOKEN = $(cat ~/access_token)
+. ~/access_token
+
 
 ### Def. func toot ###
 function toot () { curl -X POST -d "access_token=$ACCESS_TOKEN&status=$1" -Ss https://$DOMAIN/api/v1/statuses ; }
