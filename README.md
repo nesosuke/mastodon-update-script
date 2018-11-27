@@ -1,6 +1,6 @@
 # HOW TO RUN 
 1.ドメインとアクセストークンの設定   
-~/access_token に
+`~/access_token` に
 ```
 DOMAIN='YOURDOMAIN'
 ACCESS_TOKEN='YOURTOKEN'
