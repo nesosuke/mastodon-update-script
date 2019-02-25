@@ -7,11 +7,8 @@
 ###
 
 ### Conf values 
-export $(cat ~/access_token)
 SKIP_POST_DEPLOYMENT_MIGRATIONS=true
 
-### Def. func toot ###
-#function toot () { curl -X POST -d "access_token=$ACCESS_TOKEN&status=$1" -Ss https://$DOMAIN/api/v1/statuses ; }
 
 ### Update pkg(s) 
 cd ~/live 
