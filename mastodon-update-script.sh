@@ -20,6 +20,7 @@ gem install bundler
 bundle install 
 yarn install 
 
+RAILS_ENV=production bundle exec ~/live/bin/tootctl cache clear
 ### Migrate  
 RAILS_ENV=production bundle exec rails assets:clobber 
 RAILS_ENV=production bundle exec rails db:migrate 
