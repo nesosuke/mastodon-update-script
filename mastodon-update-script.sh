@@ -9,9 +9,6 @@
 ### Conf values 
 SKIP_POST_DEPLOYMENT_MIGRATIONS=true
 
-### Clear cache 
-RAILS_ENV=production bin/tootctl cache clear
-
 ### Update pkg(s) 
 cd ~/live 
 sudo apt update -y 
@@ -22,7 +19,8 @@ gem install bundler
 bundle install 
 yarn install 
 
-RAILS_ENV=production bundle exec ~/live/bin/tootctl cache clear
+
+RAILS_ENV=production ~/live/bin/tootctl cache clear
 ### Migrate  
 RAILS_ENV=production bundle exec rails assets:clobber 
 RAILS_ENV=production bundle exec rails db:migrate 
