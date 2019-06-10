@@ -9,6 +9,8 @@
 ### Conf values 
 SKIP_POST_DEPLOYMENT_MIGRATIONS=true
 
+### Clear cache 
+RAILS_ENV=production bin/tootctl cache clear
 
 ### Update pkg(s) 
 cd ~/live 
@@ -34,7 +36,8 @@ RAILS_ENV=production bundle exec rails db:migrate
 ### Restart mastodon-*.service ###
 sudo systemctl restart mastodon-*.service nginx
 
-
+### Clear cache 
+RAILS_ENV=production bin/tootctl cache clear
 
 
 # EOF
