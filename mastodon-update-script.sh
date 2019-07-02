@@ -10,10 +10,11 @@
 SKIP_POST_DEPLOYMENT_MIGRATIONS=true
 
 ### Update pkg(s) 
+
 sudo apt update -y 
 sudo apt upgrade -y 
 cd ~/.rbenv/plugins/ruby-build && git pull && cd -
-cd ~/live && git pull &
+cd ~/live && git pull 
 gem update --system
 gem install bundler 
 bundle install 
